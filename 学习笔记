@@ -1,11 +1,54 @@
-1、tcl环境设置：从 http://www.radioast.nsdc.cn/tools.php 下载TCL(for windows)软件，安装，系统会自动添加到全局变量。
+一、tcl环境设置：从 http://www.radioast.nsdc.cn/tools.php 下载TCL(for windows)软件，安装，系统会自动添加到全局变量。
    文件: #HelloWorld.tcl
          #!D:/profession/bin/tclsh   编译器位置，一般不用添加
          puts "Hello World!"
    编译:
         E:\code\tcl> tclsh HelloWorld.tcl
         E:\code\tcl> Hello World!
-   
+ 
+二、基本语法：Command args1 args2 ...
+             命令行的终止：回车新起一行或用(;)
+             #注释
+             []用来嵌套执行其他命令行
+             转义括号{}
 
+三、变量：set a 1; puts $a;    #把1赋给变量a
+        set b {$a}; puts $b  #把$a赋给变量b
+        set a(1) 1; puts $a(1) #数组a索引为1的值被赋为1
+        set a(b) 2; puts $a(b) ##数组a的索引b的值赋为2
 
-参考：https://www.yiibai.com/tcl
+四、列表：set gates [split "AND.OR.NOT.NAND.NOR" "."]; puts $gates
+        set 列表名 [lappend 列表名 特定元素];
+        set $列表名 元素名;
+
+五、表达式和运算符：expr 函数 数字;
+   set x 10;
+   puts [expr $x+10];
+   自加关键字：incr 变量 数字;
+
+六、控制流语句
+1、列表遍历：foreach 变量名 $列表名[];
+2、if语句：
+   if{判别式}
+     {语句}
+   elseif{判别式}
+     {语句}
+   else
+     {语句}
+   Tcl还提供了break和continue与if语句结合，用于循环控制
+3、for语句：
+   for 初值 判别式 步长
+     {执行语句}
+4、while语句
+   while 条件
+     {执行语句}
+5、过程（函数）定义
+   proc 过程名{参数1 参数2 ...}
+     {过程体
+           return 参量}
+   procedure程序：定义一个tcl程序就相当于定义了一个新的命令，使用时直接用程序名加与形参相对应的实参来调用
+
+参考：
+     https://blog.csdn.net/zhtysw/article/details/90516354
+     https://www.zhihu.com/people/su-ming-ya/posts
+     https://www.yiibai.com/tcl
