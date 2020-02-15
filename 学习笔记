@@ -1,0 +1,11 @@
+1、tcl环境设置：从 http://www.radioast.nsdc.cn/tools.php 下载TCL(for windows)软件，安装，系统会自动添加到全局变量。
+   文件: #HelloWorld.tcl
+         #!D:/profession/bin/tclsh   编译器位置，一般不用添加
+         puts "Hello World!"
+   编译:
+        E:\code\tcl> tclsh HelloWorld.tcl
+        E:\code\tcl> Hello World!
+   
+
+
+参考：https://www.yiibai.com/tcl/tcl_environment.html
