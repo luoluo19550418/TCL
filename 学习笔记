@@ -61,6 +61,11 @@ tcl是一个解释性语言，无需编译，每条语句顺次解释执行。
    procedure程序：定义一个tcl程序就相当于定义了一个新的命令，使用时直接用程序名加与形参相对应的实参来调用
 
 七、程序结构
+source: 可以把一个外部的tcl文件在此处展开执行
+global: 指定全局变量
+proc: 子过程，后接过程名、参数列表、执行体
+
+
 
 参考：
      https://blog.csdn.net/zhtysw/article/details/90516354
