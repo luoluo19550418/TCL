@@ -35,6 +35,7 @@ tcl是一个解释性语言，无需编译，每条语句顺次解释执行。
 四、列表和数组：set gates [split "AND.OR.NOT.NAND.NOR" "."]; puts $gates
         set 列表名 [lappend 列表名 特定元素];
         set $列表名 元素名;
+        lindex {a b c} 0 #列表索引
 
 五、表达式和运算符：expr 函数 数字;
    set x 10;
