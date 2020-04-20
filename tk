@@ -1,0 +1,1 @@
+1. 启动 Tk：cmd 中敲入wish(windowing shell) or 在tclsh中使用命令 package require Tk 来动态加载Tk扩展
