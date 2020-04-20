@@ -1,1 +1,20 @@
 1. 启动 Tk：cmd 中敲入wish(windowing shell) or 在tclsh中使用命令 package require Tk 来动态加载Tk扩展
+
+2、button .b -text "hello, world!" -command exit
+   button命令：arg1 是要创建的新窗口名字，其它参数必须成对出现（前一个是配置选项，后一个是该选项的参数值：-command exit）
+
+3、组件(widget)：一个有特定外观和行为的窗口，如：按钮、菜单、滚动条。
+   组件分层组织：main widget，像 .b代表主组件的 b子组件，.a.b代表 .a组件的一个子组件。
+ 
+4、Tk为每一类型的组件提供一个 类型命令：如 button命令可以创建按钮组件
+   前面示例中的 button命令指定了两个选项：-text    指定了按钮上显示的字符串
+                                       -command 指定了用户激活此按钮时 所执行的Tcl脚本
+   其它按钮选项：
+   -background 按钮的背景色，如 blue
+   -foreground 按钮的文字颜色，如 black
+   -font 按钮使用的字体，如"times 12"代表12磅 Times Roman字体
+   
+5、grid：创建的组件并不会自动显示，命令grid让这个按钮组件出现在屏幕上
+
+6、几何管理器：负责计算组件外观的大小和位置，并在屏幕上显示
+   示例中的 grid命令要求几何管理器调用栅格管理器(gridder)来管理.b
