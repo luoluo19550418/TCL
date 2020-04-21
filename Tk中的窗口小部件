@@ -1,0 +1,17 @@
+1-1 基本语法
+widget .path -option1 -option2 -option3 ...
+;#使用白空格来隔开“widget”、“path”和“option”进行描述
+
+pack .path
+;#“.path”命令在执行 widget 命令之后生成，我们可以在新建立的 GUI 窗口上分配“.path”命令
+
+2-1、建立按钮
+button .test -text test -command {puts "well come!"}
+pack.test
+;# 在单击“test”按钮时，花括号“{}”中的命令将会执行，并且在控制台窗口上输出“Well come!”
+
+2-2、建立复选按钮
+set test 1
+checkbutton .test -text test
+pack .test
+;#
